@@ -3,57 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velen | Developer Portfolio</title>
+    <title>Velen | Software & Game Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">👋 Velen.dev</div>
+        <div class="logo">🕹️ Velen<span class="accent">.dev</span></div>
         <nav>
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Games Arcade</a>
+            <a href="#terminal-section">Terminal</a>
+            <a href="#skills">Tech Stack</a>
+            <a href="#projects">Arcade</a>
+            <a href="#stats">Stats</a>
         </nav>
     </header>
 
     <section id="hero" class="hero-section">
-        <h1>Hi, I'm <span class="highlight">Velen</span></h1>
-        <p>A passionate frontend developer turning creative ideas into interactive web experiences.</p>
-        <a href="#projects" class="btn">Enter Arcade</a>
-    </section>
-
-    <section id="about" class="container">
-        <h2>🚀 About Me</h2>
-        <p>I specialize in building clean web applications and lightweight browser games. I love programming challenges, experimenting with new UI designs, and optimizing code performance to make things run smoothly in the browser.</p>
-    </section>
-
-    <section id="skills" class="container bg-alt">
-        <h2>💻 Tech Stack</h2>
-        <div class="skills-grid">
-            <div class="skill-card"><h3>HTML5</h3><p>Semantic Layouts</p></div>
-            <div class="skill-card"><h3>CSS3</h3><p>Modern & Responsive Styling</p></div>
-            <div class="skill-card"><h3>JavaScript</h3><p>Dynamic Interactivity & Logic</p></div>
-            <div class="skill-card"><h3>Git/GitHub</h3><p>Version Control & Collaboration</p></div>
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight animate-pop">Velen</span></h1>
+            <p class="subtitle">Frontend Developer & Indie Browser Game Creator</p>
+            <p class="hero-bio">Building interactive, performance-driven web applications and clean user experiences.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">Launch Arcade</a>
+                <a href="#terminal-section" class="btn secondary-btn">Open Terminal</a>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="container">
-        <h2>🎮 The Arcade</h2>
-        <p>Check out my latest browser game creations:</p>
+    <section id="terminal-section" class="container">
+        <h2>🛠️ Interactive Console</h2>
+        <p class="section-desc">Interact with my system directly. Type <code>help</code> to see available commands.</p>
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="terminal-title">velen@guest:~</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line">Welcome to Velen's OS v1.0.0. Type <span class="accent">'help'</span> for a list of commands.</div>
+            </div>
+            <div class="terminal-input-line">
+                <span class="prompt">velen@guest:~$</span>
+                <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container bg-alt">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>🚀 About Me</h2>
+                <p>I am a developer focused on turning ideas into interactive digital realities. I specialize in lightweight frontend technologies, writing clean code, and engineering browser-based video games from scratch.</p>
+                <p>Whether optimizing JavaScript algorithms for performance, experimenting with modern UI layouts, or mapping out software architecture, I'm always aiming to push my skills to the next level.</p>
+            </div>
+            <div class="about-cards">
+                <div class="mini-card">
+                    <h3>🌱 Currently Learning</h3>
+                    <ul>
+                        <li>Advanced JS Architectures</li>
+                        <li>Web Performance Tuning</li>
+                        <li>Modern UI/UX Design</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <h3>🎯 Long-Term Goals</h3>
+                    <ul>
+                        <li>Launch open-source toolkits</li>
+                        <li>Expand into Full-Stack dev</li>
+                        <li>Build community platforms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>💻 Core Tech Stack</h2>
+        <p class="section-desc">The languages, frameworks, and workflows I use to bring interfaces to life.</p>
+        <div class="skills-grid">
+            <div class="skill-card" data-tech="html">
+                <div class="skill-header">
+                    <span class="icon">🌐</span>
+                    <h3>HTML5</h3>
+                </div>
+                <p>Structuring semantic, accessible web architectures built for optimal search visibility and standard compliance.</p>
+            </div>
+            <div class="skill-card" data-tech="css">
+                <div class="skill-header">
+                    <span class="icon">🎨</span>
+                    <h3>CSS3</h3>
+                </div>
+                <p>Designing completely fluid, responsive structures utilizing modern layouts like Flexbox, Grid, and Custom Animations.</p>
+            </div>
+            <div class="skill-card" data-tech="js">
+                <div class="skill-header">
+                    <span class="icon">⚡</span>
+                    <h3>JavaScript</h3>
+                </div>
+                <p>Writing standard, functional programming structures for interactive behaviors, state control, and game loops.</p>
+            </div>
+            <div class="skill-card" data-tech="git">
+                <div class="skill-header">
+                    <span class="icon">🌿</span>
+                    <h3>Git & GitHub</h3>
+                </div>
+                <p>Managing complete version control environments, branches, deployment setups, and collaborative code pipelines.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container bg-alt">
+        <h2>🎮 The Custom Arcade</h2>
+        <p class="section-desc">A production showcase of native web games built utilizing native browser rendering pipelines.</p>
         
         <div class="projects-grid">
-            <div class="project-card">
-                <div class="card-icon">🕹️</div>
+            <div class="project-card animate-hover">
+                <div class="project-badge">Active Project</div>
                 <h3>Custom Web Games</h3>
-                <p>A growing hub of retro and modern browser games built completely from scratch using vanilla JavaScript.</p>
-                <a href="https://github.com/Velen-Muse/Custom-Web-Games" target="_blank" class="btn-sm">View Repository</a>
+                <p>A repository featuring lightweight browser video games built entirely utilizing JavaScript, CSS layouts, and native HTML architecture.</p>
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>CSS Graphics</span>
+                    <span>Game Loops</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Velen-Muse/Custom-Web-Games" target="_blank" class="btn-link">Source Files ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="container">
+        <h2>📊 Real-time Metrics</h2>
+        <p class="section-desc">Direct live insights streaming straight from my primary GitHub engine.</p>
+        
+        <div class="stats-wrapper">
+            <div class="stats-grid-row">
+                <img src="https://github-readme-stats.shion.dev/api?username=Velen-Muse&show_icons=true&theme=github_dark&hide_border=true" alt="GitHub Stats" />
+                <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=Velen-Muse&layout=compact&theme=github_dark&hide_border=true" alt="Top Languages" />
+            </div>
+            <div class="streak-center">
+                <img src="https://streak-stats.demolab.com/?user=Velen-Muse&theme=github-dark&hide_border=true" alt="GitHub Streak" />
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Velen. Powered by code.</p>
+        <p>© 2026 Velen. Built from scratch with clean code.</p>
     </footer>
 
     <script src="app.js"></script>
