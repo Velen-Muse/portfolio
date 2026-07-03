@@ -26,7 +26,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Header & Typography Layout */
+/* Header Navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -135,7 +135,7 @@ h2 {
 }
 .secondary-btn:hover { background-color: rgba(255,255,255,0.04); }
 
-/* About Grid Layout */
+/* About Layout */
 .about-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -302,38 +302,30 @@ h2 {
 }
 .btn-link:hover { text-decoration: underline; }
 
-/* Real-time GitHub Stats Integration Formatting */
-.stats-wrapper {
+/* 🛠️ FIX FOR THE STRIKE/STATS ROW STEPPING EFFECT */
+.stats-row {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    margin-top: 40px;
-}
-
-.stats-grid-row {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     width: 100%;
+    margin-top: 20px;
 }
 
-.stats-grid-row img, .streak-center img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+.stats-row img {
+    height: 170px; /* Forces matching heights to remove the staircase layout */
+    width: auto;
+    border-radius: 8px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.stats-grid-row img { width: 430px; }
-.streak-center img { width: 430px; }
-
-.stats-grid-row img:hover, .streak-center img:hover {
-    transform: scale(1.02);
+.stats-row img:hover {
+    transform: scale(1.03);
 }
 
-/* Footer Section styling */
+/* Footer Section */
 footer {
     text-align: center;
     padding: 40px;
@@ -342,7 +334,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Base Animations configuration layout rules */
 @keyframes pop {
     0% { transform: scale(0.96); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
