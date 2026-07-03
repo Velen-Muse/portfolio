@@ -2,7 +2,7 @@
 const terminalBody = document.getElementById('terminal-body');
 const terminalInput = document.getElementById('terminal-input');
 
-// Terminal Core Engine System Directory Logic
+// Terminal Command Directory Logic
 const commands = {
     help: "Available Commands:\n  [about]    - Deep background information\n  [skills]   - Detailed languages stack breakdown\n  [projects] - View featured core systems\n  [clear]    - Reset operational screen space",
     about: "Velen is an interface logic engine focused on building dynamic interaction loops, modern system aesthetics, and smooth lightweight browser architectures.",
@@ -22,7 +22,7 @@ terminalInput.addEventListener('keydown', function(event) {
             executeCommand(inputString);
         }
         
-        terminalInput.value = ""; // Clear active input workspace buffer frame
+        terminalInput.value = ""; // Clear input buffer
         terminalBody.scrollTop = terminalBody.scrollHeight; // Autoscroll viewport down
     }
 });
@@ -54,17 +54,15 @@ const globalRevealObserver = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.skill-card, .project-card, .mini-card, .stats-grid-row img').forEach(card => {
+document.querySelectorAll('.skill-card, .project-card, .mini-card, .stats-row img').forEach(card => {
     card.style.opacity = "0";
     card.style.transform = "translateY(24px)";
     card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
-    
-    // Create matching styling target macro injection
     card.classList.add('reveal-hook');
     globalRevealObserver.observe(card);
 });
 
-// Create Global Override Class Rule for Scroll Injections via DOM injection style
+// Create Global Override Class Rule for Scroll Injections
 const styleElement = document.createElement('style');
 styleElement.innerHTML = `.reveal-hook.visible { opacity: 1 !important; transform: translateY(0) !important; }`;
 document.head.appendChild(styleElement);
